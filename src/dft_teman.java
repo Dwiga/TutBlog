@@ -36,6 +36,8 @@ public class dft_teman extends javax.swing.JFrame {
         txtNohp = new javax.swing.JTextField();
         btnProcess = new javax.swing.JButton();
         plcTxt = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
+        txtUsia = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -54,6 +56,8 @@ public class dft_teman extends javax.swing.JFrame {
             }
         });
 
+        jLabel4.setText("Usia");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -64,16 +68,22 @@ public class dft_teman extends javax.swing.JFrame {
                     .addComponent(btnProcess)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1)
-                            .addComponent(Nickname)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel2))
-                        .addGap(61, 61, 61)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel1)
+                                    .addComponent(Nickname)
+                                    .addComponent(jLabel3)
+                                    .addComponent(jLabel2))
+                                .addGap(61, 61, 61))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel4)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(txtNama)
                             .addComponent(txtNickname)
                             .addComponent(txtAlamat)
-                            .addComponent(txtNohp, javax.swing.GroupLayout.DEFAULT_SIZE, 121, Short.MAX_VALUE))))
+                            .addComponent(txtNohp, javax.swing.GroupLayout.DEFAULT_SIZE, 121, Short.MAX_VALUE)
+                            .addComponent(txtUsia))))
                 .addGap(37, 37, 37)
                 .addComponent(plcTxt, javax.swing.GroupLayout.DEFAULT_SIZE, 491, Short.MAX_VALUE)
                 .addContainerGap())
@@ -100,9 +110,13 @@ public class dft_teman extends javax.swing.JFrame {
                             .addComponent(jLabel2)
                             .addComponent(txtNohp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(plcTxt))
-                .addGap(32, 32, 32)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4)
+                    .addComponent(txtUsia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(50, 50, 50)
                 .addComponent(btnProcess)
-                .addContainerGap(191, Short.MAX_VALUE))
+                .addContainerGap(135, Short.MAX_VALUE))
         );
 
         pack();
@@ -110,7 +124,10 @@ public class dft_teman extends javax.swing.JFrame {
 
     private void btnProcessMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnProcessMouseClicked
         // TODO add your handling code here:
-        String a = "Nama saya" + txtNama.getText()+ ", Saya biasa di panggil " + txtNickname.getText() + ", Alamat saya " + txtAlamat.getText() + ", nomor hp saya " + txtNohp.getText();
+        int strUsia = Integer.parseInt(txtUsia.getText());
+        int thnLahir = 2017-strUsia;
+        String a = "Nama saya" + txtNama.getText()+ ", Saya biasa di panggil " + txtNickname.getText() + ", Alamat saya " + txtAlamat.getText() + ", nomor hp saya " + txtNohp.getText() + ""
+                + " dan lahir pada tahun " + thnLahir;
         
         plcTxt.setText(a);
     }//GEN-LAST:event_btnProcessMouseClicked
@@ -156,10 +173,12 @@ public class dft_teman extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JTextField plcTxt;
     private javax.swing.JTextField txtAlamat;
     private javax.swing.JTextField txtNama;
     private javax.swing.JTextField txtNickname;
     private javax.swing.JTextField txtNohp;
+    private javax.swing.JTextField txtUsia;
     // End of variables declaration//GEN-END:variables
 }
