@@ -20,11 +20,13 @@ import javax.swing.JFrame;
  */
 public class dft_teman extends javax.swing.JFrame {
 
+    Date now = new Date();
     /**
      * Creates new form dft_teman
      */
     public dft_teman() {
         initComponents();
+        loadTgl();
         
         btnAct.addActionListener(new ActionListener() {
             @Override
@@ -168,6 +170,10 @@ public class dft_teman extends javax.swing.JFrame {
         plcTxt.setText(a);
     }//GEN-LAST:event_btnProcessMouseClicked
 
+    private void loadTgl(){
+        jXDatePicker1.setFormats("yyyy-MM-dd");
+        jXDatePicker1.setDate(now);
+    }
     /**
      * @param args the command line arguments
      */    
